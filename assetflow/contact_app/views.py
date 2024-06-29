@@ -4,11 +4,12 @@ from .forms import ContactForm
 
 # Create your views here.
 def contact_create_view(request):
+    
     if request.method == 'POST':
-        form = ContactForm(request.post)
+        form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request,'contact.html')
+            return redirect('list_contact')
     form = ContactForm()
     context ={
         'forms':form,
@@ -17,7 +18,6 @@ def contact_create_view(request):
 
 def contact_list_view(request):
     item_list = Contact.objects.all()
-    print(item_list)
     context={
         'contact':item_list,
     }
