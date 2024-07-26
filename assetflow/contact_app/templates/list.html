@@ -1,23 +1,38 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>List View</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <style>
-            body{
-                color:blue;
-            }
-        </style>
-    </head>
-    <body>
-        {% for item in contact%}
-            <p>{{ item }}</p>
-            <hr/> 
-        {% endfor %}
-            
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List View</title>
+    <link rel="stylesheet" href="{% static 'style/contact_list.css' %}">
+</head>
+<body>
+
+<div class="topnav">
+    <a href="/" class="active">HOME</a>
+    <a href="/create-contact">CREATE CONTACT</a>
+</div>
+
+<div class="card-container">
+    {% for item in contact %}
+    <div class="card">
+        <div class="card-img">
+            <img src="{% static 'images/user-placeholder.png' %}" alt="User Image">
+        </div>
+        <div class="card-info">
+            <h2>{{ item.name }}</h2>
+            <p>Tax ID: {{item.tax_id}} </p>
+            {% if item.email %}
+            <p>Email: {{ item.email }}</p>
+            {% endif %}
+            {% if item.address %}
+            <p>Address: {{ item.address }}</p>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+</body>
 </html>
