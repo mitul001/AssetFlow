@@ -22,3 +22,13 @@ def contact_list_view(request):
         'contact':item_list,
     }
     return render(request,'list.html',context)
+
+def update_contact_view(request,id):
+    contact_item = Contact.objects.get(id=id)
+    print('\n\n',contact_item)
+
+    form = ContactForm()
+    context ={
+        'forms':form,
+    }
+    return render(request,'contact.html',context)
