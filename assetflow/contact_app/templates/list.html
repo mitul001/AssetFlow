@@ -20,9 +20,6 @@
 <div class="card-container">
     {% for item in contact %}
     <div class="card">
-        <div class="card-img">
-            <img src="{% static 'images/user-placeholder.png' %}" alt="User Image">
-        </div>
         <div class="card-info">
             <h2>{{ item.name }}</h2>
             <p>Tax ID: {{item.tax_id}} </p>
@@ -33,13 +30,18 @@
             <p>Address: {{ item.address }}</p>
             {% endif %}
             <div class="p-3 d-flex  align-item-center">
-                <button type="button" class="btn btn-success">Update</button>
-                <button type="button" class="btn btn-danger ms-5">Delete</button>
+                <button type="button" class="btn btn-success">
+                    <a href="{% url 'update_contact' item.id %}" style="text-decoration:none;color:white;">Update</a>
+                </button>                
+                <button type="button" class="btn btn-danger ms-5">
+                    <a href="{% url 'delete_contact' item.id %}"
+                    onclick="return confirm('Are you sure you want to delete this contact?');" style="text-decoration:none;color:white;">Delete
+                    </a>
+                </button>
             </div>
         </div>
     </div>
     {% endfor %}
 </div>
-
 </body>
 </html>

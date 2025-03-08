@@ -21,14 +21,14 @@
 
         <div class='main-container'>
           <div class='main-title'>
-            <h4> Create Contact </h4>
+            <h4> {% if contact.id %} Update Contact {% else %} Create Contact {% endif %} </h4>
           </div>
             <form method='POST'>
                 {% csrf_token %}
                 <table class="contact-form">
                     {{ forms }}
                     <tr>
-                        <td colspan="2" class="submit-row">
+                        <td colspan="2" class="submit-row pt-3">
                             <button type="submit" class="btn btn-default" value="submit">Submit</button>
                         </td>
                     </tr>
