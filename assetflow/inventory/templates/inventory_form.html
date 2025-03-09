@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if transaction %}Update{% else %}Create{% endif %} Transaction</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'style/inventory_list.css' %}">
+</head>
+<body>
+
+<div class="topnav">
+    <a href="{% url 'home' %}">HOME</a>
+    <a href="{% url 'list_inventory' %}">INVENTORY</a>
+</div>
+
+<div class='main-container'>
+    <div class='main-title'>
+        <h2>{% if transaction.id %}Update{% else %}Create{% endif %} Inventory Transaction</h2>
+    </div>
+      <form method='POST'>
+          {% csrf_token %}
+          <table class="Inventory-form">
+              {{ forms }}
+              <tr>
+                  <td colspan="2" class="submit-row pt-3">
+                      <button type="submit" class="btn btn-default" value="submit">Submit</button>
+                  </td>
+              </tr>
+          </table>
+        </form>
+</div>
+</body>
+</html>

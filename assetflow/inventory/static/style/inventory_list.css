@@ -1,0 +1,130 @@
+body, html {
+    color: rgb(255, 193, 7);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+}
+
+.topnav {
+    background: linear-gradient(90deg, #444, #333);
+    overflow: hidden;
+    border-bottom: 2px solid rgb(255, 193, 7);
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+}
+
+.topnav a:hover {
+    background-color: rgb(255, 193, 7);
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.main-container{
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.main-title{
+    color: black;
+    background-color:rgb(255, 193, 7);
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px 0 10px 0;
+    text-align: center;
+}
+
+.Inventory-form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Inventory-form .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.Inventory-form .form-group.full-width {
+    width: 100%;
+}
+
+.Inventory-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgb(255, 193, 7);
+}
+
+.Inventory-form input[type="text"],
+.Inventory-form input[type="email"],
+.Inventory-form input[type="url"],
+.Inventory-form textarea,
+.Inventory-form select {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.Inventory-form textarea{
+    height: 65px;
+}
+
+.Inventory-form input[type="text"]:focus,
+.Inventory-form input[type="email"]:focus,
+.Inventory-form input[type="url"]:focus,
+.Inventory-form textarea:focus,
+.Inventory-form select:focus {
+    border-color:rgb(255, 193, 7);
+    outline: none;
+}
+
+.Inventory-form textarea {
+    resize: none;
+}
+
+.Inventory-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color:rgb(255, 193, 7);
+    color: black;
+    font-size: 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Inventory-form button:hover {
+    background-color:rgb(255, 193, 7);
+}
+
+.submit-row {
+    text-align: center;
+    margin-top: 20px;
+}
