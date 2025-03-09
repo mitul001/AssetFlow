@@ -37,10 +37,6 @@ cd AssetFlow
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
-### 3️⃣ Install Dependencies
-```bash
-pip install -r requirements.txt
-```
 ### 4️⃣ Apply Migrations
 ```bash
 python manage.py makemigrations
