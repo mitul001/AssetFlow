@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if product %}Update{% else %}Create{% endif %} Product</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'style/product_app.css' %}">
+</head>
+<body>
+
+<div class="topnav">
+    <a href="{% url 'home' %}">HOME</a>
+    <a href="{% url 'list_product' %}">PRODUCTS</a>
+</div>
+
+<div class='main-container'>
+    <div class='main-title'>
+      <h4> {% if product.id %} Update Product {% else %} Create Product {% endif %} </h4>
+    </div>
+      <form method='POST'>
+          {% csrf_token %}
+          <table class="product-form">
+              {{ forms }}
+              <tr>
+                  <td colspan="2" class="submit-row pt-3">
+                      <button type="submit" class="btn btn-default" value="submit">Submit</button>
+                  </td>
+              </tr>
+          </table>
+        </form>
+  </div>
+
+</body>
+</html>

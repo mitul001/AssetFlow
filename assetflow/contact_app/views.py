@@ -3,6 +3,10 @@ from .models import Contact
 from .forms import ContactForm
 
 # Create your views here.
+
+def home_view(request):
+    return render(request, 'home.html')
+
 def contact_create_view(request):
     
     if request.method == 'POST':
@@ -18,7 +22,6 @@ def contact_create_view(request):
 
 def contact_list_view(request):
     item_list = Contact.objects.all()
-    # breakpoint()
     context={
         'contact':item_list,
     }

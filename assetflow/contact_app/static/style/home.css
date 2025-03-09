@@ -1,0 +1,56 @@
+body, html {
+    color: rgb(255, 193, 7);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+}
+
+.container {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: #444;
+    border: 2px solid rgb(255, 193, 7);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s ease;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: rgb(255, 193, 7);
+    font-weight: bold;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: rgb(255, 193, 7);
+    color: black;
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
