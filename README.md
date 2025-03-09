@@ -15,17 +15,16 @@
 ### 🔹 Contact Management
 <img src="https://github.com/mitul001/AssetFlow/blob/main/images/contact_list.png?raw=true" width="500">
 <img src="https://github.com/mitul001/AssetFlow/blob/main/images/create_contact.png?raw=true" width="500">
-<img src="https://github.com/mitul001/AssetFlow/blob/main/images/update_contact?raw=true" width="500">
-<img src="https://github.com/mitul001/AssetFlow/blob/main/images/delete_contact?raw=true" width="500">
+<img src="https://github.com/mitul001/AssetFlow/blob/main/images/update_contact.png?raw=true" width="500">
 
 ### 🔹 Product Management
-<img src="https://github.com/mitul001/AssetFlow/blob/main/images/product_list?raw=true" width="500">
-<img src="https://github.com/mitul001/AssetFlow/blob/main/images/create_product?raw=true" width="500">
-<img src="https://github.com/mitul001/AssetFlow/blob/main/images/update_product?raw=true" width="500">
+<img src="https://github.com/mitul001/AssetFlow/blob/main/images/product_list.png?raw=true" width="500"> 
+<img src="https://github.com/mitul001/AssetFlow/blob/main/images/create_product.png?raw=true" width="500">
+<img src="https://github.com/mitul001/AssetFlow/blob/main/images/update_product.png?raw=true" width="500"> 
 
-### 🔹 Inventory Transactions
-<img src="https://github.com/mitul001/AssetFlow/blob/main/images/inventory_list?raw=true" width="500">
-<img src="https://github.com/mitul001/AssetFlow/blob/main/images/create_inventory?raw=true" width="500">
+### 🔹 Inventory Transactions 
+<img src="https://github.com/mitul001/AssetFlow/blob/main/images/inventory_list.png?raw=true" width="500"> 
+<img src="https://github.com/mitul001/AssetFlow/blob/main/images/create_inventory.png?raw=true" width="500">
 
 ## 🛠️ Installation
 ### 1️⃣ Clone the Repository
